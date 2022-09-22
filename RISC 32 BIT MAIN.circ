@@ -2,9 +2,6 @@
 <project source="2.7.1" version="1.0">
 This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
 <lib desc="#Wiring" name="0">
-    <tool name="Tunnel">
-      <a name="facing" val="north"/>
-    </tool>
     <tool name="Constant">
       <a name="facing" val="west"/>
     </tool>
@@ -32,8 +29,8 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="valign" val="base"/>
     </tool>
   </lib>
-  <lib desc="file#C:\Users\Igor\Desktop\RISC 32 Bit CPU\RISC-32-Bit-CPU\RISC 32 BIT ALU.circ" name="7"/>
-  <lib desc="file#C:\Users\Igor\Desktop\RISC 32 Bit CPU\RISC-32-Bit-CPU\RISC 32 BIT REGISTERS.circ" name="8"/>
+  <lib desc="file#RISC 32 BIT ALU.circ" name="7"/>
+  <lib desc="file#RISC 32 BIT REGISTERS.circ" name="8"/>
   <main name="main"/>
   <options>
     <a name="gateUndefined" val="ignore"/>
@@ -72,12 +69,45 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <a name="clabel" val=""/>
     <a name="clabelup" val="east"/>
     <a name="clabelfont" val="SansSerif plain 12"/>
-    <wire from="(1070,600)" to="(1070,730)"/>
     <wire from="(310,570)" to="(310,730)"/>
+    <wire from="(490,500)" to="(510,500)"/>
+    <wire from="(110,460)" to="(130,460)"/>
+    <wire from="(110,540)" to="(130,540)"/>
+    <wire from="(1520,390)" to="(1560,390)"/>
+    <wire from="(1520,480)" to="(1560,480)"/>
+    <wire from="(1250,320)" to="(1280,320)"/>
+    <wire from="(1400,600)" to="(1400,730)"/>
+    <wire from="(310,730)" to="(1400,730)"/>
     <wire from="(50,730)" to="(310,730)"/>
-    <wire from="(310,730)" to="(1070,730)"/>
+    <comp lib="0" loc="(1560,390)" name="Tunnel">
+      <a name="width" val="32"/>
+      <a name="label" val="OP1"/>
+    </comp>
+    <comp lib="0" loc="(1560,480)" name="Tunnel">
+      <a name="width" val="32"/>
+      <a name="label" val="OP2"/>
+    </comp>
     <comp lib="7" loc="(300,430)" name="main"/>
-    <comp lib="8" loc="(1050,300)" name="main"/>
+    <comp lib="8" loc="(1380,300)" name="main"/>
+    <comp lib="0" loc="(110,460)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="32"/>
+      <a name="label" val="OP1"/>
+    </comp>
+    <comp lib="0" loc="(110,540)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="32"/>
+      <a name="label" val="OP2"/>
+    </comp>
+    <comp lib="0" loc="(1250,320)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="32"/>
+      <a name="label" val="Input"/>
+    </comp>
+    <comp lib="0" loc="(510,500)" name="Tunnel">
+      <a name="width" val="32"/>
+      <a name="label" val="Result"/>
+    </comp>
     <comp lib="0" loc="(50,730)" name="Clock"/>
   </circuit>
 </project>
